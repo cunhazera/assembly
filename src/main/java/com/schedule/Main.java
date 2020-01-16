@@ -22,7 +22,7 @@ public class Main {
 
     public static void main(String[] args) throws URISyntaxException, IOException {
         Main main = new Main();
-        main.scheduler.createProductionLines();
+        main.scheduler.createProductionLines().forEach(System.out::println);
     }
 
 }

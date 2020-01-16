@@ -1,0 +1,26 @@
+Linha de montagem 1
+09:00 Cutting of steel sheets
+10:00 Austenpera (Heat treatment)
+10:30 Tempering sub-zero (Heat treatment)
+11:15 Safety sensor assembly
+12:15 Almoço
+13:15 Pieces washing
+14:00 Axis calibration
+14:30 Steel bearing assembly
+15:15 Assembly line cooling - maintenance
+15:20 Nitriding process
+16:05 Ginastica Laboral
+
+Linha de montagem 2
+09:00 Injection subsystem assembly
+10:00 Compliance check
+10:30 Navigation subsystem assembly
+11:30 Torque converter subsystem calibration
+12:30 Almoço
+13:30 Left stabilizer bar alignment
+14:00 Setup of lock and control device
+14:45 Right stabilizer bar alignment
+15:15 Seal installation
+16:00 Application of decals
+16:30 Ginastica Laboral
+
