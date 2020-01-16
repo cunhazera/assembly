@@ -26,7 +26,6 @@ public class AssemblyScheduler {
             Calendar startTime = timeInstance(9);
             productionLines.add(String.format("Linha de montagem %d", i + 1));
             lastIndex = addProductionLine(productionLines, assemblies, lastIndex, startTime);
-            productionLines.add(String.format("%s %s", simpleDateFormat.format(startTime.getTime()), "Ginastica Laboral"));
         }
         return productionLines;
     }
@@ -47,13 +46,14 @@ public class AssemblyScheduler {
                 productionLines.add(String.format("%s %s", simpleDateFormat.format(startTime.getTime()), assembly.getName()));
                 startTime.add(Calendar.MINUTE, assembly.getMinutes());
                 if (startTime.get(Calendar.HOUR_OF_DAY) == 12) {
-                    productionLines.add(String.format("%s %s", simpleDateFormat.format(startTime.getTime()), "Almoço"));
-                    startTime.add(Calendar.MINUTE, 60);
+                    productionLines.add(String.format("%s %s", simpleDateFormat.format(timeInstance(12).getTime()), "Almoço"));
+                    startTime = timeInstance(13);
                 }
             } else {
                 break;
             }
         }
+        productionLines.add(String.format("%s %s", simpleDateFormat.format(startTime.getTime()), "Ginastica Laboral"));
         return lastIndex;
     }
 

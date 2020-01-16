@@ -26,7 +26,7 @@ public class AssemblyMap {
                         return new Assembly(assemblyTitle, minutes);
                     }
                 }).collect(Collectors.toList());
-        //Collections.sort(assemblies, Comparator.comparing(Assembly::getMinutes).reversed());
+        Collections.sort(assemblies, Comparator.comparing(Assembly::getMinutes).reversed());
         return assemblies;
     }
 
