@@ -45,16 +45,21 @@ public class AssemblyScheduler {
             if (startTime.getTime().before(fiveAfternoon.getTime()) && temp.getTime().before(fiveAfternoon.getTime())) {
                 productionLines.add(String.format("%s %s", simpleDateFormat.format(startTime.getTime()), assembly.getName()));
                 startTime.add(Calendar.MINUTE, assembly.getMinutes());
-                if (startTime.get(Calendar.HOUR_OF_DAY) == 12) {
-                    productionLines.add(String.format("%s %s", simpleDateFormat.format(timeInstance(12).getTime()), "Almoço"));
-                    startTime = timeInstance(13);
-                }
+                startTime = addLunchTime(productionLines, startTime);
             } else {
                 break;
             }
         }
         productionLines.add(String.format("%s %s", simpleDateFormat.format(startTime.getTime()), "Ginastica Laboral"));
         return lastIndex;
+    }
+
+    private Calendar addLunchTime(List<String> productionLines, Calendar startTime) {
+        if (startTime.get(Calendar.HOUR_OF_DAY) == 12) {
+            productionLines.add(String.format("%s %s", simpleDateFormat.format(timeInstance(12).getTime()), "Almoço"));
+            startTime = timeInstance(13);
+        }
+        return startTime;
     }
 
     private Calendar timeInstance(int hourOfDay) {
