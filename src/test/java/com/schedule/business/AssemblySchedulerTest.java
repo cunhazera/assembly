@@ -14,7 +14,7 @@ public class AssemblySchedulerTest {
     private AssemblyScheduler scheduler = new AssemblyScheduler();
 
     @Test
-    public void testUsingTempFolder() throws IOException, URISyntaxException {
+    public void testMainDataFromProductionLine() throws IOException, URISyntaxException {
         List<String> lines = scheduler.createProductionLines();
         assertThat(lines.get(1), startsWith("09:00"));
         assertThat(lines.indexOf("12:00 Almoço"), not(-1));
