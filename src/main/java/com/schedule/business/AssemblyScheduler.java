@@ -17,9 +17,9 @@ public class AssemblyScheduler {
     private static final double DAY_MAXIMUM_MINUTES = 420;
     private SimpleDateFormat simpleDateFormat = new SimpleDateFormat("HH:mm");
 
-    public List<String> createProductionLines() throws IOException, URISyntaxException {
+    public List<String> createProductionLines(String inputPath) throws IOException, URISyntaxException {
         List<String> productionLines = new ArrayList<>();
-        List<Assembly> assemblies = new AssemblyMap().mapFileInputToAssembly();
+        List<Assembly> assemblies = new AssemblyMap(inputPath).mapFileInputToAssembly();
         int lines = numberOfLines(assemblies);
         int lastIndex = 0;
         for (int i = 0; i < lines; i++) {

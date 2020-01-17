@@ -15,7 +15,7 @@ public class AssemblySchedulerTest {
 
     @Test
     public void testMainDataFromProductionLine() throws IOException, URISyntaxException {
-        List<String> lines = scheduler.createProductionLines();
+        List<String> lines = scheduler.createProductionLines(getClass().getClassLoader().getResource("input4lines.txt").getPath());
         assertThat(lines.get(1), startsWith("09:00"));
         assertThat(lines.indexOf("12:00 Almoço"), not(-1));
         Integer last = Integer.valueOf(lines.get(lines.size() - 1).substring(0, 2));

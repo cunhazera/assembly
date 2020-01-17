@@ -14,8 +14,14 @@ import java.util.stream.Collectors;
 
 public class AssemblyMap {
 
+    private String inputPath;
+
+    public AssemblyMap(String inputPath) {
+        this.inputPath = inputPath;
+    }
+
     public List<Assembly> mapFileInputToAssembly() throws URISyntaxException, IOException {
-        Path input = Paths.get(getClass().getClassLoader().getResource("input.txt").toURI());
+        Path input = Paths.get(inputPath);
         List<Assembly> assemblies = Files.readAllLines(input).stream()
                 .map(e -> {
                     if (!e.endsWith("min")) {
