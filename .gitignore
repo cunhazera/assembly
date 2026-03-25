@@ -1,0 +1,23 @@
+# Environment variables — NEVER commit these
+.env
+.env.local
+.env.*.local
+
+# Expo
+.expo/
+dist/
+web-build/
+
+# Dependencies
+node_modules/
+
+# Native builds
+ios/
+android/
+
+# OS
+.DS_Store
+
+# Logs
+*.log
+npm-debug.log*

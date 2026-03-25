@@ -1,0 +1,28 @@
+{
+  "expo": {
+    "name": "Assembly",
+    "slug": "assembly",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "backgroundColor": "#1B2A4A"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.yourchurch.assembly"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#1B2A4A"
+      },
+      "package": "com.yourchurch.assembly"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-secure-store"
+    ],
+    "scheme": "assembly"
+  }
+}
